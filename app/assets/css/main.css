@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --container-page: 90rem;
+  --padding-page: 1.5rem;
+}
+
+@layer base {
+  html,
+  body,
+  #__nuxt {
+    min-height: 100%;
+  }
+}
+
+@layer components {
+  .section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-page {
+    width: 100%;
+    max-width: var(--container-page);
+    margin-inline: auto;
+    padding-inline: var(--padding-page);
+  }
+}
