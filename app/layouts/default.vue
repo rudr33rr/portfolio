@@ -1,15 +1,9 @@
 <template>
-  <div class="flex min-h-screen flex-col">
-    <header class="flex min-h-18 items-center justify-between gap-6">
-
-    </header>
-
+  <div class="flex min-h-screen flex-col bg-neutral-950 text-white">
+    <SiteHeader />
     <main class="flex-1">
       <slot />
     </main>
-
-    <footer class="flex min-h-18 items-center">
-
-    </footer>
+    <SiteFooter />
   </div>
 </template>

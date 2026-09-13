@@ -6,10 +6,19 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   html,
   body,
   #__nuxt {
     min-height: 100%;
+  }
+
+  body {
+    background: var(--color-neutral-950);
+    color: var(--color-white);
   }
 }
 
@@ -26,5 +35,71 @@
     max-width: var(--container-page);
     margin-inline: auto;
     padding-inline: var(--padding-page);
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-neutral-500);
+  }
+
+  .card {
+    border-radius: 1rem;
+    padding: 1.75rem;
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 0.35s ease,
+      border-color 0.35s ease;
+  }
+
+  [data-tone="dark"] .card {
+    background: var(--color-neutral-900);
+    border: 1px solid var(--color-neutral-800);
+  }
+
+  [data-tone="light"] .card {
+    background: var(--color-white);
+    border: 1px solid var(--color-neutral-200);
+  }
+
+  a.card:hover {
+    transform: translateY(-2px);
+  }
+
+  [data-tone="dark"] a.card:hover {
+    background: var(--color-neutral-800);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0.7rem 1.15rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: var(--color-white);
+    color: var(--color-neutral-950);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .btn:hover {
+    background: var(--color-blue-600);
+    color: var(--color-white);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: inherit;
+    border: 1px solid var(--color-neutral-700);
+  }
+
+  .btn-ghost:hover {
+    background: var(--color-white);
+    color: var(--color-neutral-950);
   }
 }
